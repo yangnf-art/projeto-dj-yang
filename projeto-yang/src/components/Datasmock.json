@@ -1,0 +1,9 @@
+[
+  { "id": 1, "dia": "Segunda-feira", "status": "Disponivel" },
+  { "id": 2, "dia": "Terça-feira", "status": "Ocupado" },
+  { "id": 3, "dia": "Quarta-feira", "status": "Disponivel" },
+  { "id": 4, "dia": "Quinta-feira", "status": "Ocupado" },
+  { "id": 5, "dia": "Sexta-feira", "status": "Disponivel" },
+  { "id": 6, "dia": "Sábado", "status": "Ocupado" },
+  { "id": 7, "dia": "Domingo", "status": "Disponivel" }
+]

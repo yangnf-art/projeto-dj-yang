@@ -1,0 +1,102 @@
+
+.agenda-secao {
+  background-color: #0d0d0d;
+  padding: 100px 50px;
+  border-top: 1px solid #1a1a1a;
+  box-sizing: border-box;
+}
+
+.agenda-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.agenda-titulo {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  color: white;
+  margin: 0 0 60px 0;
+}
+
+/* CONTAINER DA LISTA */
+.agenda-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CADA LINHA DE SHOW */
+.agenda-item {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 2fr 3.5fr; 
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #1c1c1c;
+  transition: background-color 0.2s;
+}
+
+.agenda-item:hover {
+  background-color: #111111;
+}
+
+/* DATA */
+.agenda-data-box {
+  font-family: monospace;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+/* INFO DA FESTA */
+.agenda-info h3 {
+  color: white;
+  font-size: 1.3rem;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
+
+.agenda-local {
+  color: #888888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* HORÁRIO */
+.hora-texto {
+  color: white;
+  font-family: monospace;
+  font-size: 1rem;
+  margin: 0 0 4px 0;
+}
+
+.duracao-tag {
+  color: #666666;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* TRACKLIST / ESTILO */
+.badge-estilo {
+  display: inline-block;
+  border: 1px solid #333;
+  color: #a0a0a0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: monospace;
+  background-color: #050505;
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 900px) {
+  .agenda-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  .agenda-titulo {
+    font-size: 3.5rem;
+  }
+}

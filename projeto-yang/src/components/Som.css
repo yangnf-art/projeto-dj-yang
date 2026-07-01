@@ -1,0 +1,80 @@
+/* A CAIXA GERAL DA SEÇÃO */
+.som-container {
+  
+  padding: 100px 50px; 
+  border-top: 1px solid #1a1a1a;
+  box-sizing: border-box; 
+}
+
+/* O TOPO DA SEÇÃO */
+.som-header {
+  margin-bottom: 60px;
+  text-align: left; 
+  width: 100%;
+}
+
+
+.sobre-tag {
+  font-family: monospace;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.som-titulo {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  color: white;
+  margin: 0;
+}
+
+/* A GRADE QUE COLOCA OS CARDS LADO A LADO  */
+.som-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px; 
+}
+
+.som-card {
+  background-color: #0a0a0a;
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 30px;
+  transition: border-color 0.3s;
+}
+
+.som-card:hover {
+  border-color: #444444; 
+}
+
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.plataforma-nome {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.link-seta {
+  color: #888888;
+  font-size: 1.2rem;
+}
+
+
+@media (max-width: 900px) {
+  .som-cards-grid {
+    grid-template-columns: 1fr; 
+  }
+  .som-titulo {
+    font-size: 3.5rem;
+  }
+}

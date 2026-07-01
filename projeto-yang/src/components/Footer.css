@@ -1,0 +1,97 @@
+/* src/components/Footer.css */
+
+.footer-container {
+  background-color: #050505; 
+  border-top: 1px solid #1a1a1a;
+  padding: 80px 50px 30px 50px; 
+  
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+}
+
+/* CENTRALIZAÇÃO DAS COLUNAS */
+.footer-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a logo e os links horizontalmente */
+  text-align: center;
+  gap: 15px;
+}
+
+.footer-titulo {
+  color: #555;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: var(--fonte-detalhes); /* Mantém a fonte tech apenas nos títulos */
+}
+
+.footer-logo {
+  height: 80px; 
+  object-fit: contain;
+  
+}
+
+
+.footer-coluna p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin: 0;
+  font-family: var(--fonte-principal); 
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  font-family: var(--fonte-principal); 
+}
+
+.footer-link:hover {
+  color: var(--cor-destaque); 
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  color: #444; 
+  font-size: 0.65rem; 
+  letter-spacing: 1px;
+  margin: 0;
+  font-family: var(--fonte-detalhes);
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}

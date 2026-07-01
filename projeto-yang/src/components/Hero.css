@@ -1,0 +1,130 @@
+/* A Caixa Principal */
+.hero-container {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(10,10,10,1) 100%), url('../assets/woods.JPG');
+  background-size: cover;
+  background-position: center;
+  position: relative; 
+  overflow: hidden;
+  
+  /* Centraliza automaticamente o que não tem posição fixa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PREGADO NO TOPO */
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Faz o cabeçalho ocupar a tela toda */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 40px 50px;
+  box-sizing: border-box; /* CRUCIAL: Evita que o padding crie barra de rolagem */
+  z-index: 100; 
+}
+
+.hero-logo {
+  height: 90px; 
+}
+
+.menu-icon {
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+}
+/* NO CENTRO */
+.logo-centro {
+  width: 60vw; 
+  max-width: 800px; 
+  margin-top: -50px; 
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.1)); 
+}
+
+
+@media (max-width: 768px) {
+  .logo-centro {
+    width: 80vw;
+  }
+}
+
+.hero-bottom-left {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.subtitle {
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #ccff00; 
+}
+
+
+.scroll-wrapper {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.scroll-text {
+  font-family: monospace;
+  font-size: 0.6rem;
+  color: #a0a0a0;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.scroll-linha {
+  width: 2px;
+  height: 30px;
+  background-color: #ccff00;
+  animation: pular 1.5s infinite ease-in-out;
+}
+
+@keyframes pular {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(12px); opacity: 0.4; } 
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* TELA PRETA DO MENU */
+.menu-overlay {
+  position: fixed; 
+  top: 0; left: 0; width: 100%; height: 100vh;
+  background-color: rgba(10, 10, 10, 0.98); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50; 
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.menu-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: color 0.2s;
+}
+
+.menu-links a:hover {
+  color: #ccff00;
+}
