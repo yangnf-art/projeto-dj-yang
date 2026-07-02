@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import dadosIniciais from './datasMock.json';
+import dadosIniciais from './Datasmock.json';
 
 export default function Admin() {
   // Estados da Agenda Semanal (Dias)
