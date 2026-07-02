@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import logoImagem from '../assets/2dj.png'; 
-import './MenuGlobal.css';
+import './Menuglobal.css';
 
 export default function MenuGlobal() {
   const [menuAberto, setMenuAberto] = useState(false);
