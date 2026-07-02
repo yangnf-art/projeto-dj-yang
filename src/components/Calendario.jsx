@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Calendario.css';
-import dadosIniciais from './datasMock.json';
+import dadosIniciais from './Datasmock.json';
 import Agenda from './Agenda'; // Trazendo a Agenda para dentro do Calendário
 
 export default function Calendario() {
