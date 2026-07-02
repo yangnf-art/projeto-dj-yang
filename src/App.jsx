@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'; 
 
-import MenuGlobal from './components/MenuGlobal';
+import MenuGlobal from './components/Menuglobal';
 import Hero from './components/Hero';
 import Sobre from './components/Sobre';
 import Som from './components/Som';
