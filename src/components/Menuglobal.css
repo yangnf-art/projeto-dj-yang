@@ -24,30 +24,84 @@
 }
 
 .menu-overlay {
-  /* Substitua o background atual por este: */
-  background-color: rgba(0, 0, 0, 0.85); 
+  /* Fixa o menu na tela inteira */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999; /* Garante que fique por cima de tudo */
   
-  /* Adicione estas linhas para o efeito de vidro embaçado: */
-  backdrop-filter: blur(8px); 
-  -webkit-backdrop-filter: blur(8px); 
+  /* Centraliza os links */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Aplica a transparência e o desfoque */
+  background: rgba(0, 0, 0, 0.7) !important; 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
+/* Organiza o bloco de links e empurra para baixo para fugir do logo */
 .menu-links {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  text-align: center;
+  gap: 2.5rem; 
+  margin-top: 80px; /* Afasta os links do topo para liberar o clique no "Home" */
+  position: relative;
+  z-index: 1001; /* Traz os links para a frente de tudo */
 }
 
+/* Visual base: voltando para a fonte pesada/grossa original */
 .menu-links a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  transition: color 0.2s;
+  font-size: 2rem; /* Tamanho maior */
+  font-weight: 800; /* Letra grossa de volta */
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: relative; 
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  width: fit-content; /* Garante que a barrinha tenha exatamente o tamanho da palavra */
 }
+
+/* O Ponto do lado esquerdo */
+.menu-links a::before {
+  content: '●'; 
+  color: transparent; 
+  font-size: 1rem;
+  margin-right: 15px;
+  transform: translateX(-10px); 
+  transition: all 0.3s ease;
+}
+
+/* A barrinha verde em baixo */
+.menu-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; /* Mais distante para não colar na letra grossa */
+  left: 0;
+  width: 0%; 
+  height: 2px; /* Barrinha levemente mais visível para acompanhar a fonte */
+  background-color: #cddc39; 
+  transition: width 0.3s ease; 
+}
+
+/* === EFEITOS QUANDO O MOUSE PASSA POR CIMA === */
 
 .menu-links a:hover {
-  color: #ccff00;
+  color: #cddc39; 
+}
+
+.menu-links a:hover::before {
+  color: #cddc39;
+  transform: translateX(0);
+}
+
+.menu-links a:hover::after {
+  width: 100%;
 }
