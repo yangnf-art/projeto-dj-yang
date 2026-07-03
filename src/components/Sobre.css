@@ -20,6 +20,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start; /* Força o alinhamento à esquerda */
+  text-align: left; /* Garante que a coluna não centralize o conteúdo */
 }
 
 .sobre-tag {
@@ -39,10 +41,14 @@
 
 .sobre-bio p {
   color: #a0a0a0;
-  font-family: monospace;
+  /* Trocamos a monospace por uma fonte moderna que aceita justificação perfeitamente */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 25px;
+  font-weight: 300; /* Deixa a letra um pouco mais fina e elegante */
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify; /* Deixa as bordas retas dos dois lados */
+  max-width: 95%;
 }
 
 /* ESTILO DA FOTO (DIREITA) */
