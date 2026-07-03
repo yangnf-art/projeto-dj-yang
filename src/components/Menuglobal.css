@@ -24,69 +24,69 @@
 }
 
 .menu-overlay {
-  /* Fixa o menu na tela inteira */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 999; /* Garante que fique por cima de tudo */
+  z-index: 999; 
   
-  /* Centraliza os links */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  /* Aplica a transparência e o desfoque */
   background: rgba(0, 0, 0, 0.8) !important; 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Organiza o bloco de links e empurra para baixo para fugir do logo */
+/* Adicionado align-items: center para centralizar a coluna de palavras */
 .menu-links {
   display: flex;
   flex-direction: column;
+  align-items: center; 
   gap: 2.5rem; 
-  margin-top: 80px; /* Afasta os links do topo para liberar o clique no "Home" */
+  margin-top: 80px; 
   position: relative;
-  z-index: 1001; /* Traz os links para a frente de tudo */
+  z-index: 1001; 
 }
 
-/* Visual base: voltando para a fonte pesada/grossa original */
+/* O link agora usa o espaço exato da palavra para o centro ser perfeito */
 .menu-links a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 2rem; /* Tamanho maior */
-  font-weight: 800; /* Letra grossa de volta */
+  font-size: 2rem; 
+  font-weight: 800; 
   text-transform: uppercase;
   letter-spacing: 5px;
   position: relative; 
-  display: flex;
-  align-items: center;
+  text-align: center;
   transition: color 0.3s ease;
-  width: fit-content; /* Garante que a barrinha tenha exatamente o tamanho da palavra */
+  width: fit-content; 
 }
 
-/* O Ponto do lado esquerdo */
+/* O Ponto flutuante absoluto (não empurra mais o texto para o lado) */
 .menu-links a::before {
   content: '●'; 
+  position: absolute;
+  left: -35px; /* Joga o ponto para fora da palavra */
+  top: 50%; /* Centraliza com o meio da palavra */
+  transform: translateY(-50%) translateX(-10px); /* Ajusta a altura e recua */
   color: transparent; 
   font-size: 1rem;
-  margin-right: 15px;
-  transform: translateX(-10px); 
   transition: all 0.3s ease;
 }
 
-/* A barrinha verde em baixo */
+/* Barrinha verde - Agora cresce do CENTRO para as laterais */
 .menu-links a::after {
   content: '';
   position: absolute;
-  bottom: -8px; /* Mais distante para não colar na letra grossa */
-  left: 0;
+  bottom: -8px; 
+  left: 50%; /* Ponto de partida no meio da palavra */
+  transform: translateX(-50%); /* Centraliza o eixo da barrinha */
   width: 0%; 
-  height: 2px; /* Barrinha levemente mais visível para acompanhar a fonte */
+  height: 2px; 
   background-color: #cddc39; 
   transition: width 0.3s ease; 
 }
@@ -99,9 +99,9 @@
 
 .menu-links a:hover::before {
   color: #cddc39;
-  transform: translateX(0);
+  transform: translateY(-50%) translateX(0); /* O ponto aparece e desliza na altura certa */
 }
 
 .menu-links a:hover::after {
-  width: 100%;
+  width: 100%; /* A barra estica 50% para a esquerda e 50% para a direita */
 }
