@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&display=swap');
 
-/* --- 1. VARIÁVEIS GLOBAIS (O "DNA" DO SEU DESIGN) --- */
-/* Isso facilita muito! Se um dia você quiser mudar o tom de verde, você muda só aqui. */
+
 :root {
   --fonte-principal: 'Inter', Helvetica, sans-serif;
   --fonte-detalhes: 'Space Mono', monospace;
-  --cor-fundo: #0d0d0d; /* O seu fundo escuro original */
-  --cor-texto: #f5f5f5; /* O seu texto principal claro */
+  --cor-fundo: #0d0d0d;
+  --cor-texto: #f5f5f5; /*  texto principal claro */
   --cor-texto-mutado: #888888;
-  --cor-destaque: #ccff00; /* O seu verde neon */
+  --cor-destaque: #ccff00; 
 }
 
-/* --- 2. RESET E CORPO DO SITE --- */
+
 * {
   margin: 0;
   padding: 0;
@@ -27,12 +26,11 @@ body, html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --- 3. HIERARQUIA DE TÍTULOS (O Segredo do Minimalismo) --- */
 h1, h2, h3, h4 {
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 15px;
-  letter-spacing: -1px; /* Letras mais unidas, visual de design gringo */
+  letter-spacing: -1px; 
 }
 
 h1 { font-size: 3.5rem; }
@@ -42,10 +40,9 @@ h3 { font-size: 1.5rem; }
 p {
   font-size: 1rem;
   color: var(--cor-texto-mutado);
-  font-weight: 300; /* Texto mais fino para leitura confortável */
+  font-weight: 300; 
 }
 
-/* --- 4. AS SUAS CLASSES ORIGINAIS (Preservadas e Inteligentes) --- */
 .texto-destaque {
   color: var(--cor-destaque);
 }
@@ -56,7 +53,6 @@ p {
   padding: 20px;
 }
 
-/* DETALHES TECH  */
 .sobre-tag, 
 .tag-verde, 
 .tag-vermelha, 

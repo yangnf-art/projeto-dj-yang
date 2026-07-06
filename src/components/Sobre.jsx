@@ -1,5 +1,3 @@
-// src/components/Sobre.jsx
-
 import './Sobre.css'; 
 import fotoYangRed from '../assets/yang1.jpg'; 
 
@@ -8,9 +6,8 @@ export default function Sobre() {
     <section className="sobre-secao" id="sobre">
       <div className="sobre-container-grid">
         
-        {/* LADO ESQUERD O CONTEÚDO DE TEXTO */}
+        {/* LADO ESQUERDO CONTEÚDO DE TEXTO */}
         <div className="sobre-coluna-texto">
-          {/* a classe texto-destaque */}
           <p className="sobre-tag texto-destaque">// THE CHRONICLE</p>
           
           <h2 className="sobre-titulo">

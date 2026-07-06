@@ -1,4 +1,3 @@
-// src/components/Agenda.jsx
 import { useState, useEffect } from 'react';
 import './Agenda.css'; 
 
@@ -6,7 +5,7 @@ export default function Agenda() {
   const [eventos, setEventos] = useState([]);
 
   useEffect(() => {
-    // Tenta buscar os shows do banco de dados local do navegador
+    
     const showsSalvos = localStorage.getItem('showsYang');
     
     if (showsSalvos) {

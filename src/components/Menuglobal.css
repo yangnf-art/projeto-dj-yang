@@ -41,7 +41,7 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Adicionado align-items: center para centralizar a coluna de palavras */
+
 .menu-links {
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@
   z-index: 1001; 
 }
 
-/* O link agora usa o espaço exato da palavra para o centro ser perfeito */
+
 .menu-links a {
   color: #ffffff;
   text-decoration: none;
@@ -66,32 +66,32 @@
   width: fit-content; 
 }
 
-/* O Ponto flutuante absoluto (não empurra mais o texto para o lado) */
+
 .menu-links a::before {
   content: '●'; 
   position: absolute;
-  left: -35px; /* Joga o ponto para fora da palavra */
-  top: 50%; /* Centraliza com o meio da palavra */
-  transform: translateY(-50%) translateX(-10px); /* Ajusta a altura e recua */
+  left: -35px; 
+  top: 50%; 
+  transform: translateY(-50%) translateX(-10px); 
   color: transparent; 
   font-size: 1rem;
   transition: all 0.3s ease;
 }
 
-/* Barrinha verde - Agora cresce do CENTRO para as laterais */
+
 .menu-links a::after {
   content: '';
   position: absolute;
   bottom: -8px; 
-  left: 50%; /* Ponto de partida no meio da palavra */
-  transform: translateX(-50%); /* Centraliza o eixo da barrinha */
+  left: 50%; 
+  transform: translateX(-50%); 
   width: 0%; 
   height: 2px; 
   background-color: #cddc39; 
   transition: width 0.3s ease; 
 }
 
-/* === EFEITOS QUANDO O MOUSE PASSA POR CIMA === */
+
 
 .menu-links a:hover {
   color: #cddc39; 
@@ -99,9 +99,9 @@
 
 .menu-links a:hover::before {
   color: #cddc39;
-  transform: translateY(-50%) translateX(0); /* O ponto aparece e desliza na altura certa */
+  transform: translateY(-50%) translateX(0); 
 }
 
 .menu-links a:hover::after {
-  width: 100%; /* A barra estica 50% para a esquerda e 50% para a direita */
+  width: 100%; 
 }

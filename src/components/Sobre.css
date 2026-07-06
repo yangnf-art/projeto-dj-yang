@@ -1,5 +1,3 @@
-/* src/components/Sobre.css */
-
 .sobre-secao {
   background-color: #0d0d0d;
   margin: 0;
@@ -7,7 +5,7 @@
   overflow: hidden;
 }
 
-/* Criando o Grid de duas colunas paralelas */
+
 .sobre-container-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -20,8 +18,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Força o alinhamento à esquerda */
-  text-align: left; /* Garante que a coluna não centralize o conteúdo */
+  align-items: flex-start; 
+  text-align: left; 
 }
 
 .sobre-tag {
@@ -41,13 +39,13 @@
 
 .sobre-bio p {
   color: #a0a0a0;
-  /* Trocamos a monospace por uma fonte moderna que aceita justificação perfeitamente */
+
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   font-size: 1.1rem;
-  font-weight: 300; /* Deixa a letra um pouco mais fina e elegante */
+  font-weight: 300; 
   line-height: 1.6;
   margin-bottom: 20px;
-  text-align: justify; /* Deixa as bordas retas dos dois lados */
+  text-align: justify; 
   max-width: 95%;
 }
 

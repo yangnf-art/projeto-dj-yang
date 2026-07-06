@@ -130,13 +130,11 @@ export default function Orcamento() {
           </div>
 
           <div className="orcamento-form-area">
-            {/* Adicionado o onSubmit no form para capturar o envio */}
+            {/* Adicionado no form para capturar o envio */}
             <form className="formulario" onSubmit={handleSubmit}>
               <input type="text" name="nome" placeholder="Seu nome *" required value={form.nome} onChange={handleChange} />
               <input type="email" name="email" placeholder="Seu email *" required value={form.email} onChange={handleChange} />
               <input type="text" name="telefone" placeholder="Telefone / WhatsApp *" required value={form.telefone} onChange={handleChange} />
-              
-              {/* Transformado em type="text" para aceitar "Sexta-feira" e com estilo condicional se vier preenchido */}
               <input 
                 type="text" 
                 name="data" 

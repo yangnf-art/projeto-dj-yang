@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import dadosIniciais from './Datasmock.json';
 
 export default function Admin() {
-  // Estados da Agenda Semanal (Dias)
+  // Agenda Semanal (Dias)
   const [agenda, setAgenda] = useState([]);
   
-  // Estados dos Próximos Shows (Tour)
+  // Próximos Shows (Tour)
   const [shows, setShows] = useState([]);
   const [novoShow, setNovoShow] = useState({ festa: '', local: '', data: '', horario: '', duracao: '', estilo: '' });
 
@@ -90,7 +90,7 @@ export default function Admin() {
           <button type="submit" style={{ gridColumn: 'span 2', padding: '15px', backgroundColor: '#ccff00', color: 'black', fontWeight: 'bold', border: 'none', cursor: 'pointer' }}>+ ADICIONAR SHOW NA AGENDA</button>
         </form>
 
-        {/* --- LISTA DE SHOWS PARA DELETAR --- */}
+        {/* LISTA DE SHOWS*/}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {shows.map(show => (
             <div key={show.id} style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#111', padding: '15px', border: '1px solid #333' }}>

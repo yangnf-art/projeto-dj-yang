@@ -12,7 +12,7 @@ export default function Som() {
         </h2>
       </div>
 
-      {/* A GRADE DOS PLAYERS */}
+      {/* GRADE DOS PLAYERS */}
       <div className="som-cards-grid">
         
         {/* CARD DO SPOTIFY */}

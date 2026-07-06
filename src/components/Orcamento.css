@@ -1,5 +1,3 @@
-/* src/components/Orcamento.css */
-
 .orcamento-container {
   padding: 100px 0;
   border-top: 1px solid #1a1a1a;
@@ -58,7 +56,7 @@
 /* Customizando a barra de arrastar (Slider) */
 input[type=range] {
   -webkit-appearance: none;
-  appearance: none; /* Desliga o visual padrão */
+  appearance: none; 
   width: 100%;
   background: transparent;
 }
@@ -164,7 +162,7 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 34px;
 }
 
-/* A bolinha dentro do Toggle */
+
 .slider-round:before {
   position: absolute;
   content: "";
@@ -203,7 +201,7 @@ input:checked + .slider-round:before {
   border-radius: 34px;
 }
 
-/* A bolinha dentro do Toggle */
+
 .slider-round:before {
   position: absolute;
   content: "";
@@ -215,8 +213,6 @@ input:checked + .slider-round:before {
   transition: .4s;
   border-radius: 50%;
 }
-
-/* Quando o usuário clica, o fundo fica verde e a bolinha anda pro lado */
 input:checked + .slider-round {
   background-color: #ccff00;
 }

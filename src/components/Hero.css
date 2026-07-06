@@ -1,4 +1,3 @@
-/* A Caixa Principal */
 .hero-container {
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(10,10,10,1) 100%), url('../assets/woods.JPG');
@@ -13,17 +12,16 @@
   align-items: center;
 }
 
-/* PREGADO NO TOPO */
 .hero-header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Faz o cabeçalho ocupar a tela toda */
+  width: 100%; 
   display: flex;
   justify-content: space-between; 
   align-items: center;
   padding: 40px 50px;
-  box-sizing: border-box; /* CRUCIAL: Evita que o padding crie barra de rolagem */
+  box-sizing: border-box; 
   z-index: 100; 
 }
 
